@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sound Chatbot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.0/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/domManipulation.js"></script>
+    <script src="/js/webSocketHandler.js"></script>
+    <style>
+        #chatbox {
+            height: 400px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1 class="text-center">Sound Chatbot</h1>
+            <div id="chatbox">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <div class="input-group">
+                <input id="text-input" type="text" class="form-control" placeholder="메시지를 입력하시오...">
+                <div class="input-group-append">
+                    <button onclick="sendText()" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
